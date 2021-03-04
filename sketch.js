@@ -9,7 +9,7 @@ function setup() {
 line=createSprite(10,300,3000,5)
 
   speed=random(10,40);
-  weight=random(10,50)
+  weight=random(5,95)
  bullet= createSprite(100, 150, 50, 50);
  bullet.velocityX=speed;
  bullet.shapeColor=(255)
@@ -21,10 +21,10 @@ line=createSprite(10,300,3000,5)
  
 
  wall=createSprite(1200,150,60,180);
- wall.shapeColor=(80,80,80);
+// wall.shapeColor=(80,80,80);
 
  wall1=createSprite(1200,450,60,180);
- wall1.shapeColor=(80,80,80);
+// wall1.shapeColor=(80,80,80);
 
  
 }
@@ -35,10 +35,10 @@ function draw() {
   bullet.velocityX=0
 var deformation=1*weight*speed*speed/150
 if( deformation<100){
-  bullet.shapeColor=color("yellow")
+  wall.shapeColor=color("yellow")
 }
 if (deformation>100 && deformation<180){
-  bullet.shapeColor=color("red")
+  wall.shapeColor=color("red")
 }
  }
 
@@ -46,10 +46,10 @@ if (deformation>100 && deformation<180){
   bullet1.velocityX=0
 var deformation=1*weight*speed*speed/200
 if( deformation<100 ){
-  bullet1.shapeColor=color("red")
+  wall1.shapeColor=color("red")
 }
 if(deformation>100 && deformation<180){
-bullet1.shapeColor=color("yellow")
+wall1.shapeColor=color("yellow")
 }
  }
 
